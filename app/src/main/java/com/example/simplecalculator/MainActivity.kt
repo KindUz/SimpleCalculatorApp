@@ -131,12 +131,10 @@ class MainActivity : AppCompatActivity() {
         if (result == longresult.toDouble()){
             binding.tvResult.text = longresult.toString()
             binding.tvInput.text = longresult.toString()
-            Log.d("TellMe", "Это оно")
         }
         else {
             binding.tvResult.text = result.toString()
             binding.tvInput.text = result.toString()
-            Log.d("TellMe", "Это оно но не оно")
         }
 
 
