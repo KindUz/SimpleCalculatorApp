@@ -117,6 +117,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnEqual.setOnClickListener {
             if (binding.tvInput.text.last() == '0' && binding.tvInput.text.get(binding.tvInput.text.length-2) == '/') binding.tvResult.text = "NaN"
+            if (binding.tvInput.text.last() == '+' || binding.tvInput.text.last() == '-' || binding.tvInput.text.last() == '*' || binding.tvInput.text.last() == '/') {
+                binding.tvResult.text = "Error"
+                val text = binding.tvInput.text.dropLast(1)
+                binding.tvInput.text = text
+            }
             else showResult()
 
         }
